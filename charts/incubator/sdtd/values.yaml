@@ -21,28 +21,29 @@ env:
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
-service:
-  main:
-    ports:
-      http:
-        enabled: false
-        primary: false
-      serverquery:
-        primary: true
-        enabled: true
-        port: 26900
-      serverlist:
-        enabled: true
-        port: 26900
-        protocol: UDP
-      steam:
-        enabled: true
-        port: 26901
-        protocol: UDP
-      raknet:
-        enabled: true
-        port: 26902
-        protocol: UDP
+global:
+  service:
+    main:
+      ports:
+        http:
+          enabled: false
+          primary: false
+        serverquery:
+          primary: true
+          enabled: true
+          port: 26900
+        serverlist:
+          enabled: true
+          port: 26900
+          protocol: UDP
+        steam:
+          enabled: true
+          port: 26901
+          protocol: UDP
+
+zero-scale-proxy:
+  env:
+    PROXY_TYPE: 7d2d
 
 podSecurityContext:
   fsGroup: 1000

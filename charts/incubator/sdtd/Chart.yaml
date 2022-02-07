@@ -14,9 +14,9 @@ maintainers:
   - name: reitermarkus
     email: me@reitermark.us
 dependencies:
-  # - name: zero-scale-proxy
-  #   version: 0.1.0
-  #   repository: file://../zero-scale-proxy
+  - name: zero-scale-proxy
+    version: 0.1.0
+    repository: file://../zero-scale-proxy
   - name: common
     repository: https://library-charts.k8s-at-home.com
     version: 4.3.0

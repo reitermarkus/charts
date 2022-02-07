@@ -19,16 +19,5 @@ env:
   # -- Set the container timezone
   TZ: UTC
 
-# -- Configures service settings for the chart.
-# @default -- See values.yaml
-service:
-  main:
-    ports:
-      http:
-        enabled: false
-
-ingress:
-  # -- Enable and configure ingress settings for the chart under this key.
-  # @default -- See values.yaml
-  main:
-    enabled: false
+serviceAccount:
+  create: true
